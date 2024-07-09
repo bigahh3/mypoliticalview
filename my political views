@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Political Views</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .contact-info {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .comments {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .comments h2 {
+            margin-bottom: 10px;
+        }
+        .comment-form {
+            margin-bottom: 20px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            line-height: 1.6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        .comment-list {
+            margin-top: 20px;
+            padding-left: 0;
+            list-style: none;
+        }
+        .comment-list li {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .comment-list li:last-child {
+            border-bottom: none;
+        }
+        .comment-list .comment {
+            font-size: 1.1rem;
+        }
+        .comment-list .author {
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Political Views</h1>
+    </header>
+
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to my website where I articulate my views on various political topics.</p>
+        </section>
+
+        <section id="beliefs">
+            <h2>Core Beliefs</h2>
+            <ul>
+                <li>1: I believe that being a fascist is a great thing just being racist and hateful to the poor tormented gay and Jewish people is a great thing because they deserve it they deserve all the hate .</li>
+                <li>2: it is a shameful spectacle to see how the whole Democratic world is oozing Sympathy for the gay people honestly I feel bad for those people who lives in those countries just imagine how mad you will be if a gay person has more rights than you more rights than the average person and whole lot of stuff about gay people just makes me mad.</li>
+                <li>3: I think that one of the biggest problems are the gay people so leave a comment down below to tell me how we should fix this issue.</li>
+            </ul>
+        </section>
+
+        <section id="issues">
+            <h2>Key Issues</h2>
+            <ul>
+                <li>Issue 1: the existence of gay people.</li>
+                <li>Issue 2: the existence of Jewish people.</li>
+                <li>Issue 3: Muslims in Europe</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact-info">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to discuss further, feel free to contact me:</p>
+            <p>instagram: krita_ky</p>
+        </section>
+
+        <section id="comments" class="comments">
+            <h2>Comments</h2>
+            <div class="comment-form">
+                <h3>Leave a Comment</h3>
+                <form id="commentForm">
+                    <textarea id="commentText" rows="4" placeholder="Write your comment here"></textarea><br>
+                    <button type="submit">Submit Comment</button>
+                </form>
+            </div>
+            <ul class="comment-list" id="commentList">
+                <!-- Comments will be dynamically added here -->
+            </ul>
+        </section>
+    </div>
+
+    </footer>
+
+    <script>
+        // JavaScript for handling comment submission and display
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get comment text from textarea
+            var commentText = document.getElementById('commentText').value.trim();
+
+            if (commentText !== '') {
+                // Create new comment list item
+                var listItem = document.createElement('li');
+                listItem.classList.add('comment');
+
+                // Create paragraph for comment text
+                var commentPara = document.createElement('p');
+                commentPara.textContent = commentText;
+                listItem.appendChild(commentPara);
+
+                // Add list item to comment list
+                var commentList = document.getElementById('commentList');
+                commentList.appendChild(listItem);
+
+                // Clear textarea after submission
+                document.getElementById('commentText').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
+
